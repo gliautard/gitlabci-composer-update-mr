@@ -41,7 +41,7 @@ func CreateMergeBranch(diff ComposerDiff) error {
 		fmt.Println(out)
 		return err
 	}
-	if out, err := runQuiet(Config.GitPath, "commit", "-m", diff.CommitMessage); err != nil {
+	if out, err := runQuiet(Config.GitPath, "commit", "-n", "-m", diff.CommitMessage); err != nil {
 		fmt.Println(out)
 		return err
 	}
